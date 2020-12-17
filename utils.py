@@ -40,7 +40,7 @@ def plot_img_array(img_array, ncol=3):
 
     for i in range(len(img_array)):
         plots[i // ncol, i % ncol]
-        plots[i // ncol, i % ncol].imshow(img_array[i])
+        plots[i // ncol, i % ncol].imshow(img_array[i].astype(np.uint8))
 
 def plot_side_by_side(img_arrays):
     flatten_list = reduce(lambda x,y: x+y, zip(*img_arrays))
